@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>test</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  
+<div id="list">
+  <h1>記帳</h1>
+  <div class="line"></div>
+  <div class="enter">
+    <label>產品</label>
+    <input v-model="inputi.name" placeholder=" 名稱..."/>
+    <label>價格</label>
+    <input v-model="inputi.price" placeholder=" 123..."/>
+    <button @click="addi">新增</button>
+  </div>
+  <div class="view">
+    <div class="title">
+      <div class="name">產品</div>
+      <div class="price">價格</div>
+    </div>
+    <div class="row" v-for="(s,index) in showi">
+      <div class="name">{{s.name}}</div>
+      <div class="price">$ {{s.price}}</div>
+      <div class="del" @click="deli(index)">X</div>
+    </div>
+    <div class="total">
+      <div class="name">總價</div>
+      <div class="price">$ {{totali}}</div>
+    </div>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.21/vue.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
